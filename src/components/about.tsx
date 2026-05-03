@@ -32,27 +32,19 @@ const About = () => {
           </p>
         </div>
         <p className="text-lg leading-relaxed text-gray-300">
-          I’m a full-stack developer who loves turning ideas into clean,
-          scalable products. My foundation is in the MERN stack, and I’m
-          actively leveling up in AI — exploring generative models, agents, and
-          developer-first tooling.
+          I’m a full-stack developer focused on building scalable, high-performance web applications. I specialize in the MERN stack and Next.js, with hands-on experience developing SaaS platforms, dashboards, and data-intensive systems.
         </p>
 
         <p className="text-lg leading-relaxed text-gray-300">
-          I believe the best learning happens by building, experimenting, and
-          shipping real projects — not getting stuck in tutorial loops. Whether
-          it’s crafting clean APIs, integrating AI agents, or fine-tuning
-          performance, I’m always pushing myself to understand the “why” behind
-          the code.
+          My work revolves around designing clean frontend architectures, building reusable component systems, and handling complex UI workflows involving large datasets, real-time interactions, and dynamic configurations.
         </p>
 
         <p className="text-lg leading-relaxed text-gray-300">
-          Right now, I’m exploring open-source, developer tooling, and practical
-          AI integrations that help developers work smarter and move faster.
+          Recently, I’ve been exploring practical AI integrations and developer tooling, focusing on building systems that enhance productivity and improve user experience in real-world applications.
         </p>
 
         <div className="pt-10 flex justify-center">
-          <GitHubCalendar username="pakshgupta" theme={githubTheme} />
+          <GitHubCalendar username="goyaldhruv" theme={githubTheme} />
         </div>
       </div>
     </section>

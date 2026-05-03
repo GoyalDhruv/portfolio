@@ -72,7 +72,7 @@ export function Contact() {
             Let's <span className="text-accent font-mono">Connect</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Feel free to reach out for opportunities or just to say hello!
+            Looking to collaborate, hire, or build something impactful? Let’s talk.
           </p>
         </div>
 
@@ -89,15 +89,15 @@ export function Contact() {
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-accent" />
-                  <span className="text-sm">pakshgupta007@gmail.com</span>
+                  <span className="text-sm">dhruvgoyal014@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-accent" />
-                  <span className="text-sm">+91 9719699947</span>
+                  <span className="text-sm">+91 7027965551</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-accent" />
-                  <span className="text-sm">Dehradun, Uttarakhand, India</span>
+                  <span className="text-sm">Panchkula, Haryana, India</span>
                 </div>
               </CardContent>
             </Card>
@@ -115,7 +115,7 @@ export function Contact() {
                   className="w-full justify-start hover:text-grey"
                 >
                   <a
-                    href="https://github.com/pakshgupta"
+                    href="https://github.com/GoyalDhruv"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-start w-full"
@@ -129,7 +129,7 @@ export function Contact() {
                   className="w-full justify-start hover:text-grey "
                 >
                   <a
-                    href="https://www.linkedin.com/in/paksh-gupta-053724212/"
+                    href="https://www.linkedin.com/in/dhruv-goyal-55aa901b6/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-start w-full"
@@ -143,7 +143,7 @@ export function Contact() {
                   className="w-full justify-start hover:text-grey"
                 >
                   <a
-                    href="https://leetcode.com/u/_Paksh_Gupta/"
+                    href="https://leetcode.com/u/Dhruv0010/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-start w-full"

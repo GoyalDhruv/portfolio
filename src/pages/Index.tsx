@@ -1,5 +1,4 @@
 import About from "@/components/about";
-import BlogGrid from "@/components/blog-grid";
 import { Contact } from "@/components/contact";
 import { CreativeHero } from "@/components/creative-hero";
 import { CreativeProjects } from "@/components/creative-projects";
@@ -16,13 +15,12 @@ const Index = () => {
       <About />
       <InteractiveTimeline />
       <CreativeProjects />
-      <BlogGrid />
       <DynamicSkills />
       <Contact />
       <footer className="py-12 text-center border-t border-border/20 bg-gradient-card">
         <div className="container px-4 mx-auto">
           <p className="mb-4 font-mono text-sm text-muted-foreground">
-            © 2025 Paksh Gupta
+            © 2025 Dhruv Goyal
           </p>
           <div className="flex gap-2 justify-center items-center">
             <span className="text-xs text-muted-foreground">Built with</span>

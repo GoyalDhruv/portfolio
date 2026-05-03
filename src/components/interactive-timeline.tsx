@@ -32,16 +32,24 @@ export function InteractiveTimeline() {
     {
       id: "1",
       type: "work",
-      title: "Software Developer",
-      organization: "TehriHills",
-      location: "Dehradun, Uttarakhand",
-      period: "October 2024 – Present",
+      title: "Frontend Developer (Freelance)",
+      organization: "Izocloud",
+      location: "Remote",
+      period: "Feb 2026 – Present",
       description: [
-        "Built and deployed a full-stack analytics platform using React.js, Node.js, and MySQL",
-        "Developed an AI assistant using OpenAI GPT API to convert natural language queries into data insights",
-        "Improved frontend performance by 30% and modularized UI components",
+        "Developing a scalable SaaS platform using Next.js for accounting and business workflows",
+        "Built dynamic dashboards, data tables, and reusable UI systems for handling large datasets",
+        "Engineered a customizable invoice/document editor with template-driven layouts and real-time data binding",
+        "Optimized state management and frontend performance for complex, data-intensive interactions",
       ],
-      skills: ["React.js", "Node.js", "MySQL", "OpenAI API", "Analytics"],
+      skills: [
+        "Next.js",
+        "React.js",
+        "REST APIs",
+        "State Management",
+        "SaaS",
+        "Dashboards",
+      ],
       current: true,
       icon: Briefcase,
       color: "creative-purple",
@@ -49,32 +57,40 @@ export function InteractiveTimeline() {
     {
       id: "2",
       type: "work",
-      title: "Web Developer Intern",
-      organization: "GEU-DEEMED",
-      location: "Dehradun, Uttarakhand",
-      period: "July 2023 – September 2023",
+      title: "Full Stack Developer",
+      organization: "Minterminds",
+      location: "Chandigarh, India",
+      period: "Jan 2024 – Feb 2026",
       description: [
-        "Developed a React.js-based e-commerce platform with real-time price filtering",
-        "Designed and deployed REST APIs using Node.js, Express.js, and MongoDB",
-        "Implemented JWT-based authentication and security measures",
+        "Built high-performance dashboards and web apps using React.js and Next.js across multiple products",
+        "Developed real-time features using WebSockets, reducing API calls and improving responsiveness",
+        "Implemented authentication, scheduling, analytics, and multi-vendor workflows",
+        "Integrated Stripe payments, KYC systems, and multilingual support for production applications",
       ],
-      skills: ["React.js", "Express.js", "MongoDB", "JWT", "E-commerce"],
+      skills: [
+        "React.js",
+        "Next.js",
+        "WebSockets",
+        "Stripe",
+        "APIs",
+        "Dashboards",
+      ],
       icon: Briefcase,
       color: "creative-pink",
     },
     {
       id: "3",
       type: "education",
-      title: "B.Tech - Computer Science and Engineering (AI and DS)",
+      title: "B.Tech - Computer Science",
       organization: "Graphic Era University",
       location: "Dehradun, Uttarakhand",
       period: "2020 – 2024",
       description: [
-        "CGPA: 8.75",
-        "Specialized in Artificial Intelligence and Data Science",
-        "Completed various projects in web development and AI",
+        "CGPA: 8.8 / 10",
+        "Built multiple full-stack and real-time applications",
+        "Focused on web development, system design, and scalable architectures",
       ],
-      skills: ["AI", "Data Science", "Algorithms", "Machine Learning"],
+      skills: ["Web Development", "Data Structures", "System Design"],
       icon: GraduationCap,
       color: "creative-cyan",
     },
@@ -131,17 +147,15 @@ export function InteractiveTimeline() {
               <div
                 key={item.id}
                 data-timeline-id={item.id}
-                className={`relative transition-all duration-1000 ${
-                  visibleItems.includes(item.id)
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-20"
-                }`}
+                className={`relative transition-all duration-1000 ${visibleItems.includes(item.id)
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-20"
+                  }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div
-                  className={`flex flex-col md:flex-row items-center gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   {/* Timeline Node */}
                   <div className="relative z-10 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
@@ -154,16 +168,14 @@ export function InteractiveTimeline() {
 
                   {/* Content Card */}
                   <div
-                    className={`w-full md:w-5/12 ${
-                      index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
-                    }`}
+                    className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:mr-auto" : "md:ml-auto"
+                      }`}
                   >
                     <Card
-                      className={`bg-gradient-card border-0 shadow-creative hover:shadow-glow transition-all duration-500 hover:scale-105 cursor-pointer ${
-                        activeItem === item.id
-                          ? "ring-2 ring-primary shadow-glow"
-                          : ""
-                      }`}
+                      className={`bg-gradient-card border-0 shadow-creative hover:shadow-glow transition-all duration-500 hover:scale-105 cursor-pointer ${activeItem === item.id
+                        ? "ring-2 ring-primary shadow-glow"
+                        : ""
+                        }`}
                       onClick={() =>
                         setActiveItem(activeItem === item.id ? null : item.id)
                       }
@@ -190,9 +202,8 @@ export function InteractiveTimeline() {
                             </p>
                           </div>
                           <ChevronRight
-                            className={`w-5 h-5 transition-transform duration-300 ${
-                              activeItem === item.id ? "rotate-90" : ""
-                            }`}
+                            className={`w-5 h-5 transition-transform duration-300 ${activeItem === item.id ? "rotate-90" : ""
+                              }`}
                           />
                         </div>
 
@@ -210,11 +221,10 @@ export function InteractiveTimeline() {
 
                       {/* Expandable Content */}
                       <div
-                        className={`transition-all duration-500 overflow-hidden ${
-                          activeItem === item.id
-                            ? "max-h-96 opacity-100"
-                            : "max-h-0 opacity-0"
-                        }`}
+                        className={`transition-all duration-500 overflow-hidden ${activeItem === item.id
+                          ? "max-h-96 opacity-100"
+                          : "max-h-0 opacity-0"
+                          }`}
                       >
                         <CardContent className="space-y-4">
                           <ul className="space-y-2">
@@ -258,17 +268,6 @@ export function InteractiveTimeline() {
             ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        {/* <div className="text-center mt-16">
-          <Button
-            size="lg"
-            className="bg-gradient-hero text-white hover:shadow-glow transition-all duration-500 hover:scale-105"
-          >
-            View Full Resume
-            <ChevronRight className="ml-2 w-5 h-5" />
-          </Button>
-        </div> */}
       </div>
     </section>
   );

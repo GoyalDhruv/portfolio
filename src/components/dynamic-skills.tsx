@@ -12,6 +12,7 @@ import {
   SiLangchain,
   SiMongodb,
   SiMysql,
+  SiNextdotjs,
   SiNodedotjs,
   SiOpenai,
   SiPostgresql,
@@ -31,7 +32,7 @@ export function DynamicSkills() {
     { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E" },
     { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6" },
     { name: "Python", icon: <SiPython />, color: "#3776AB" },
-    { name: "C++", icon: <SiCplusplus />, color: "#00599C" },
+    { name: "Next.js", icon: <SiNextdotjs />, color: "#FFFFFF" },
     { name: "React", icon: <SiReact />, color: "#61DAFB" },
     { name: "Redux", icon: <SiRedux />, color: "#764ABC" },
     { name: "HTML5", icon: <SiHtml5 />, color: "#E34F26" },
@@ -41,24 +42,28 @@ export function DynamicSkills() {
     { name: "Express", icon: <SiExpress />, color: "#FFFFFF" },
     { name: "MongoDB", icon: <SiMongodb />, color: "#47A248" },
     { name: "MySQL", icon: <SiMysql />, color: "#F29111" },
-    { name: "PostgreSQL", icon: <SiPostgresql />, color: "#336791" },
     { name: "JWT", icon: <SiJsonwebtokens />, color: "#FFFFFF" },
     { name: "Git", icon: <SiGit />, color: "#F05032" },
     { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
     { name: "OpenAI", icon: <SiOpenai />, color: "#FFFFFF" },
-    { name: "LangChain", icon: <SiLangchain />, color: "#3776AB" },
+    { name: "Zustand", icon: <SiReact />, color: "#61DAFB" },
   ];
 
-  const certifications = [
+  const highlights = [
     {
-      name: "Frontend Developer (React)",
-      provider: "HackerRank",
+      title: "SaaS Platform Development",
+      description: "Built scalable accounting & business management systems at Izocloud",
       color: "creative-purple",
     },
     {
-      name: "Backend REST API (Node.js)",
-      provider: "Udemy",
-      color: "creative-pink",
+      title: "High-Performance UI Systems",
+      description: "Designed modular dashboards and data-heavy interfaces",
+      color: "creative-cyan",
+    },
+    {
+      title: "API & State Optimization",
+      description: "Improved performance and reduced API overhead in production apps",
+      color: "creative-orange",
     },
   ];
 
@@ -100,8 +105,7 @@ export function DynamicSkills() {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A comprehensive overview of my technical capabilities and
-            professional achievements
+            Focused on building scalable SaaS platforms, data-intensive dashboards, and high-performance frontend systems
           </p>
         </div>
 
@@ -159,36 +163,33 @@ export function DynamicSkills() {
           ))}
         </div>
 
-        {/* Certifications & Stats */}
+        {/* Highlights & Stats */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* Certifications */}
+          {/* Highlights */}
           <Card className="bg-gradient-card border-0 shadow-creative">
             <CardHeader>
               <CardTitle className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-gradient-hero">
                   <Award className="w-6 h-6 text-white" />
                 </div>
-                Certifications
+                Professional Highlights
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              {certifications.map((cert, index) => (
+              {highlights.map((item, index) => (
                 <div
-                  key={cert.name}
-                  className={`
-                    flex items-center gap-4 p-4 rounded-lg bg-muted/50 
-                    transition-all duration-500 hover:scale-105 hover:bg-muted/70
-                    animate-slide-up
-                  `}
+                  key={item.title}
+                  className="flex items-center gap-4 p-4 rounded-lg bg-muted/50 
+    transition-all duration-500 hover:scale-105 hover:bg-muted/70 animate-slide-up"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <div
-                    className={`w-3 h-3 rounded-full bg-${cert.color} animate-pulse-glow`}
+                    className={`w-3 h-3 rounded-full bg-${item.color} animate-pulse-glow`}
                   ></div>
                   <div>
-                    <h4 className="font-semibold text-sm">{cert.name}</h4>
+                    <h4 className="font-semibold text-sm">{item.title}</h4>
                     <p className="text-xs text-muted-foreground">
-                      {cert.provider}
+                      {item.description}
                     </p>
                   </div>
                 </div>
@@ -211,24 +212,23 @@ export function DynamicSkills() {
               <div className="grid grid-cols-2 gap-6">
                 {[
                   {
-                    label: "Years Experience",
-                    value: "1+",
+                    label: "Experience",
+                    value: "2+ Years",
                     color: "creative-purple",
                   },
                   {
-                    label: "Problem Solving (LeetCode, GFG)",
-                    value: "500+",
+                    label: "Projects Built",
+                    value: "5+",
                     color: "creative-pink",
-                    url: "https://www.credly.com/users/paksh-gupta/badges#credly",
                   },
                   {
-                    label: "Badges Earned",
-                    value: "4+",
+                    label: "SaaS Platforms",
+                    value: "2+",
                     color: "creative-cyan",
                   },
                   {
-                    label: "Certifications",
-                    value: "2",
+                    label: "Performance Gains",
+                    value: "40%",
                     color: "creative-orange",
                   },
                 ].map((stat, index) => (
@@ -253,25 +253,6 @@ export function DynamicSkills() {
               </div>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Skills Cloud Visualization */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-card shadow-creative">
-            <div className="text-left">
-              <h3 className="text-2xl font-bold mb-2 bg-gradient-hero bg-clip-text text-transparent">
-                Ready to Build Amazing Things
-              </h3>
-              <p className="text-muted-foreground">
-                Let's create something extraordinary together
-              </p>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-12 h-12 bg-gradient-hero rounded-full animate-pulse-glow"></div>
-              <div className="w-8 h-8 bg-creative-pink rounded-full animate-bounce-slow"></div>
-              <div className="w-6 h-6 bg-creative-cyan rounded-full animate-float"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

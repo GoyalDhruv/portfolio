@@ -26,65 +26,95 @@ export function CreativeProjects() {
   const projects: Project[] = [
     {
       id: "1",
-      title: "Nexa Shop",
-      subtitle: "E-commerce Platform",
+      title: "Izocloud",
+      subtitle: "SaaS Accounting Platform",
       description:
-        "A cutting-edge footwear e-commerce platform with intuitive navigation, dynamic UI elements, and seamless shopping experience.",
+        "A scalable SaaS platform for managing accounting, transactions, and business workflows with highly dynamic UI systems.",
       features: [
-        "Optimized API interactions with Redux Toolkit reducing calls by 40%",
-        "Integrated Stripe for secure payment processing",
-        "Implemented advanced caching mechanisms",
-        "Enhanced server response time for efficient transactions",
+        "Developed Next.js-based frontend for data-intensive SaaS workflows",
+        "Built dynamic tables with filtering, sorting, pagination, and inline editing",
+        "Engineered a customizable invoice/document editor with real-time data binding",
+        "Designed reusable component architecture for multi-module scalability",
       ],
-      technologies: [
-        "React",
-        "TypeScript",
-        "Redux Toolkit",
-        "Express.js",
-        "MongoDB",
-        "Stripe",
-      ],
+      technologies: ["Next.js", "React.js", "REST APIs", "SaaS", "Dashboards"],
       stats: [
-        { label: "Performance Boost", value: "40%", color: "creative-purple" },
-        { label: "API Optimization", value: "40%", color: "creative-pink" },
-        { label: "User Rating", value: "4.8★", color: "creative-cyan" },
+        { label: "Modules", value: "5+", color: "creative-cyan" },
       ],
-      date: "May 2024",
-      category: "E-commerce",
-      gradient: "from-creative-purple to-creative-pink",
-      live: "https://nexashop.netlify.app/",
-      github: "https://github.com/pakshgupta/ecommerce-website",
-      icon: Zap,
+      date: "2026",
+      category: "SaaS",
+      gradient: "from-creative-cyan to-creative-purple",
+      live: "https://izocloud.net/login/",
+      github: "#",
+      icon: Code,
     },
     {
       id: "2",
-      title: "Smart Nav Plus",
-      subtitle: "Travel Platform",
+      title: "Portlifo",
+      subtitle: "Multi-Tenant Platform",
       description:
-        "An intelligent travel platform offering personalized recommendations for attractions, restaurants, and hotels with real-time features.",
+        "A multi-tenant platform enabling users to create and manage personalized portfolio instances with dynamic configurations.",
       features: [
-        "Integrated real-time weather updates for trip planning",
-        "Designed fuel cost estimation tool using data analytics",
-        "Personalized recommendations engine",
-        "Budget-conscious trip planning optimization",
+        "Built tenant-based architecture supporting multiple independent user instances",
+        "Designed dynamic UI rendering based on user-specific configurations",
+        "Implemented scalable routing and modular frontend structure",
+        "Optimized performance for multi-user environments",
       ],
-      technologies: [
-        "React",
-        "JavaScript",
-        "Google Map API",
-        "Travel Advisor API",
-      ],
+      technologies: ["React.js", "Multi-Tenant Architecture", "APIs"],
       stats: [
-        { label: "Real-time Data", value: "100%", color: "creative-cyan" },
-        { label: "Cost Accuracy", value: "95%", color: "creative-orange" },
-        { label: "User Satisfaction", value: "4.7★", color: "creative-pink" },
+        { label: "Tenants", value: "Multi", color: "creative-orange" },
       ],
-      date: "February 2024",
-      category: "Travel Tech",
-      gradient: "from-creative-cyan to-creative-orange",
-      live: "https://smartnav-plus.netlify.app/",
-      github: "https://github.com/pakshgupta/smart-nav-plus",
+      date: "2025",
+      category: "Platform",
+      gradient: "from-creative-orange to-creative-pink",
+      live: "https://portlifo.com/",
+      github: "#",
       icon: Palette,
+    },
+    {
+      id: "3",
+      title: "Hike",
+      subtitle: "Travel & Booking Platform",
+      description:
+        "A full-stack travel platform with booking workflows, dashboards, and optimized backend interactions.",
+      features: [
+        "Built complete Next.js application from scratch with authentication",
+        "Designed dashboards and booking workflows for tourism platform",
+        "Optimized database queries improving performance by 40%",
+        "Implemented scalable backend APIs and frontend integration",
+      ],
+      technologies: ["Next.js", "MongoDB", "APIs", "Authentication"],
+      stats: [
+        { label: "Query Speed", value: "+40%", color: "creative-pink" },
+      ],
+      date: "2025",
+      category: "Travel Tech",
+      gradient: "from-creative-pink to-creative-cyan",
+      live: "https://hike.minterminds.in/",
+      github: "#",
+      icon: Zap,
+    },
+    {
+      id: "4",
+      title: "Turbotrek",
+      subtitle: "E-commerce Platform",
+      description:
+        "A full-stack e-commerce platform with secure payments, admin panel, and optimized frontend performance.",
+      features: [
+        "Implemented JWT authentication and protected admin routes",
+        "Integrated Stripe payments and SendGrid notifications",
+        "Built responsive UI with performance optimizations",
+        "Designed scalable component structure for product management",
+      ],
+      technologies: ["MERN Stack", "Stripe", "Redux", "SendGrid"],
+      stats: [
+        { label: "Features", value: "Full-stack", color: "creative-purple" },
+      ],
+      date: "2024",
+      category: "E-commerce",
+      gradient: "from-creative-purple to-creative-orange",
+      live: "https://turbotrek.netlify.app/",
+      github: "https://github.com/GoyalDhruv/Nike-Clone",
+      icon: Code,
     },
   ];
 
@@ -159,15 +189,17 @@ export function CreativeProjects() {
                     </div>
 
                     <div className="flex gap-2">
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="hover:text-creative-purple"
-                      >
-                        <a href={project?.github} target="#">
-                          <Github className="w-5 h-5" />
-                        </a>
-                      </Button>
+                      {project?.github === "#" ? null : (
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="hover:text-creative-purple"
+                        >
+                          <a href={project?.github} target="#">
+                            <Github className="w-5 h-5" />
+                          </a>
+                        </Button>
+                      )}
                       <Button
                         variant="ghost"
                         size="icon"
@@ -250,9 +282,8 @@ export function CreativeProjects() {
                 {/* Hover Overlay */}
                 <div
                   className={`
-                  absolute inset-0 bg-gradient-to-br ${
-                    project.gradient
-                  } opacity-0 
+                  absolute inset-0 bg-gradient-to-br ${project.gradient
+                    } opacity-0 
                   transition-opacity duration-500 pointer-events-none
                   ${hoveredProject === project.id ? "opacity-5" : ""}
                 `}
@@ -263,11 +294,10 @@ export function CreativeProjects() {
               <div
                 className={`
                 absolute -bottom-6 right-6 transition-all duration-500
-                ${
-                  hoveredProject === project.id
+                ${hoveredProject === project.id
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0"
-                }
+                  }
               `}
               >
                 <Button
@@ -300,7 +330,7 @@ export function CreativeProjects() {
               className="bg-gradient-hero text-white hover:shadow-glow transition-all duration-500 hover:scale-105"
             >
               <a
-                href="https://github.com/pakshgupta"
+                href="https://github.com/GoyalDhruv"
                 target="#"
                 className="flex items-center"
               >

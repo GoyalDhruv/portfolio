@@ -16,10 +16,13 @@ export function CreativeHero() {
 
   const downloadResume = () => {
     const url =
-      "https://drive.google.com/file/d/1WD4dI7-yKdJYU5jK5zKOCEmHXRwtR5UL/view?usp=sharing";
+      "https://drive.google.com/file/d/1Jos0DK6Acp_LsZDh0OooxO0mappVT29b/view?usp=sharing";
+
     const link = document.createElement("a");
     link.href = url;
-    link.download = "paksh_gupta_resume.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -84,10 +87,10 @@ export function CreativeHero() {
               <div className="space-y-6">
                 <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-none animate-fade-in">
                   <span className="block bg-gradient-hero bg-clip-text text-transparent animate-text-gradient bg-[length:200%_200%]">
-                    Paksh Gupta
+                    Dhruv Goyal
                   </span>
                   <span className="block text-foreground mt-2">
-                    Software Developer
+                    Full Stack Developer
                   </span>
                 </h1>
 
@@ -106,22 +109,20 @@ export function CreativeHero() {
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
                   Building{" "}
                   <span className="text-creative-purple font-semibold">
-                    modern web applications enhanced
+                    scalable SaaS platforms
                   </span>{" "}
-                  with
+                  and{" "}
                   <span className="text-creative-pink font-semibold">
-                    {" "}
-                    practical and intelligent
-                  </span>
+                    data-driven applications
+                  </span>{" "}
+                  with{" "}
                   <span className="text-creative-orange font-semibold">
-                    {" "}
-                    AI Solutions
+                    modern web technologies
                   </span>
                 </p>
                 <p className="text-lg text-muted-foreground font-mono">
-                  <span className="text-creative-purple">→</span> Currently
-                  building analytics platforms at{" "}
-                  <span className="font-semibold">TehriHills</span>
+                  <span className="text-creative-purple">→</span> Building data-intensive SaaS products, dashboards, and custom UI systems at{" "}
+                  <span className="font-semibold">Izocloud</span>
                 </p>
               </div>
 
@@ -154,44 +155,6 @@ export function CreativeHero() {
                   Let's Connect
                 </Button>
               </div>
-
-              {/* Social Links */}
-              {/* <div
-                className="flex items-center justify-center lg:justify-start gap-6 animate-slide-up"
-                style={{ animationDelay: "0.6s" }}
-              >
-                {[
-                  {
-                    icon: Github,
-                    color: "creative-purple",
-                    delay: "0s",
-                    label: "GitHub",
-                  },
-                  {
-                    icon: Linkedin,
-                    color: "creative-pink",
-                    delay: "0.2s",
-                    label: "LinkedIn",
-                  },
-                  {
-                    icon: Mail,
-                    color: "creative-cyan",
-                    delay: "0.4s",
-                    label: "Email",
-                  },
-                ].map(({ icon: Icon, color, delay, label }, index) => (
-                  <Button
-                    key={index}
-                    variant="ghost"
-                    size="icon"
-                    className={`h-14 w-14 rounded-full border-2 border-${color}/20 hover:border-${color} hover:text-${color} hover:shadow-glow transition-all duration-500 hover:scale-110 animate-float backdrop-blur-sm`}
-                    style={{ animationDelay: delay }}
-                    aria-label={label}
-                  >
-                    <Icon className="h-6 w-6" />
-                  </Button>
-                ))}
-              </div> */}
             </div>
 
             {/* Right Side - Creative Image Section */}
@@ -215,7 +178,7 @@ export function CreativeHero() {
                       <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-creative-purple/20 via-creative-pink/20 to-creative-cyan/20 p-1">
                         <img
                           src="./me.png"
-                          alt="Paksh Gupta"
+                          alt="Dhruv Goyal"
                           className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
                         />
                       </div>
@@ -229,33 +192,6 @@ export function CreativeHero() {
                       </div>
                     </div>
 
-                    {/* Creative Stats Around Image */}
-                    {/* <div className="absolute -top-4 left-8 bg-card/80 backdrop-blur-sm border border-border/20 rounded-2xl px-4 py-2">
-                      <div className="text-lg font-bold text-creative-purple">
-                        1+ Years
-                      </div>
-                      <div className="text-xs text-muted-foreground font-mono">
-                        Experience
-                      </div>
-                    </div> */}
-
-                    {/* <div className="absolute -top-4 right-8 bg-card/80 backdrop-blur-sm border border-border/20 rounded-2xl px-4 py-2">
-                      <div className="text-lg font-bold text-creative-pink">
-                        10+
-                      </div>
-                      <div className="text-xs text-muted-foreground font-mono">
-                        Projects
-                      </div>
-                    </div> */}
-
-                    {/* <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-card/80 backdrop-blur-sm border border-border/20 rounded-2xl px-4 py-2">
-                      <div className="text-lg font-bold text-creative-cyan">
-                        8.75
-                      </div>
-                      <div className="text-xs text-muted-foreground font-mono">
-                        CGPA
-                      </div>
-                    </div> */}
                   </div>
 
                   {/* Code elements floating around */}
