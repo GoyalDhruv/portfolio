@@ -3,7 +3,6 @@ import { Award, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
   SiCplusplus,
-  SiCss3,
   SiExpress,
   SiGit,
   SiHtml5,
@@ -36,7 +35,6 @@ export function DynamicSkills() {
     { name: "React", icon: <SiReact />, color: "#61DAFB" },
     { name: "Redux", icon: <SiRedux />, color: "#764ABC" },
     { name: "HTML5", icon: <SiHtml5 />, color: "#E34F26" },
-    { name: "CSS3", icon: <SiCss3 />, color: "#1572B6" },
     { name: "Tailwind", icon: <SiTailwindcss />, color: "#06B6D4" },
     { name: "Node.js", icon: <SiNodedotjs />, color: "#339933" },
     { name: "Express", icon: <SiExpress />, color: "#FFFFFF" },
