@@ -43,7 +43,7 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="font-mono font-semibold text-lg text-accent">
-            <img className="h-[30px]" src="./logo1.png" alt="" />
+            <img className="h-[30px]" src="./logo.png" alt="" />
           </div>
 
           {/* Desktop Navigation */}
